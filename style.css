@@ -6,7 +6,7 @@
 
 body {
   color: white;
-  background-color: black;
+  background-color: white;
 }
 
 #container {
@@ -74,5 +74,11 @@ body {
 
 :focus {
   outline: none !important;
+}
+
+button {
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 /*# sourceMappingURL=style.css.map */
