@@ -6,11 +6,11 @@
 
 body {
   color: white;
-  background-color: white;
+  background-color: black;
 }
 
 #container {
-  height: 100vh;
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,8 +77,8 @@ body {
 }
 
 button {
-  -webkit-border-radius: 0;
+  color: black;
+  background-color: white;
   -webkit-appearance: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 /*# sourceMappingURL=style.css.map */
