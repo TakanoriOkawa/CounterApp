@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+  color: white;
+  background-color: black;
+}
+
+#container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title {
+  font-size: 45px;
+  letter-spacing: 1.5px;
+}
+
+.cal {
+  font-size: 50px;
+}
+
+.inputArea {
+  width: 100%;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.inputArea .btn {
+  font-size: 30px;
+  padding: 5px 10px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.inputArea .top,
+.inputArea .bottom {
+  margin-right: 70px;
+}
+
+.changeBtn {
+  font-size: 30px;
+  padding: 5px 10px;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+:focus {
+  outline: none !important;
+}
+/*# sourceMappingURL=style.css.map */

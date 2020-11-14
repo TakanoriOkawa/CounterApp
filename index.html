@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.2</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="container">
+            <h1 class="title">{{title}}</h1>
+            <div class="inputArea">
+                <div class="top">
+                    <button class="btn" @click="firstIncrement">+</button>
+                    <button class="btn" @click="secondIncrement">+</button>
+                </div>
+                <h1 class="cal">{{first}} {{key}} {{second}} = {{resultAdd(key)}}</h1>
+                <div class="bottom">
+                    <button class="btn" @click="firstDecrement">-</button>
+                    <button class="btn" @click="secondDecrement">-</button>      
+                </div>
+            </div>
+            <div class="format">
+                <button  class="changeBtn" @click="key = '+'">+</button>
+                <button  class="changeBtn" @click="key = '-'">-</button>
+                <button  class="changeBtn" @click="key = '×'">×</button>
+                <button  class="changeBtn" @click="key = '÷'">÷</button>
+                <button  class="changeBtn" @click="first = 0, second = 0">C</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script>
+        new Vue({
+            data:{
+                first:0,
+                second:0,
+                title:'addition',
+                format:['Addition','Subtraction','Multiplication','Division'],
+                key:'+',  
+            },
+            methods:{
+                firstIncrement(){
+                    this.first += 1;
+                },
+                firstDecrement(){
+                    if(this.first > 0){
+                        this.first -= 1;
+                    }
+                },
+                secondIncrement(){
+                    this.second += 1;
+                },
+                secondDecrement(){
+                    if(this.second > 0){
+                        this.second -= 1;
+                    }
+                },
+            },
+            computed:{
+                resultAdd(){
+                    return function(f){
+                        if(f === "+"){
+                            this.title = this.format[0];
+                            return this.first + this.second;
+                        }else if(f === "-"){
+                            this.title = this.format[1];
+                            return this.first - this.second;
+                        }else if(f === "×"){
+                            this.title = this.format[2];
+                            return this.first * this.second;
+                        }else{
+                            this.title = this.format[3];
+                            return this.first / this.second;
+                        }
+                    }
+                },
+            },
+            //resultAddはcomputedではなく、methodsでもいいのでは？  
+        }).$mount("#app");
+
+        //position absoluteを使うとボタンが押せない
+    </script>
+</body>
+</html>
+
