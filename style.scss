@@ -51,7 +51,16 @@ body{
     outline: none !important;
 }
 button{
-    -webkit-border-radius : 0;
-    // -webkit-appearance : none;
-    -webkit-tap-highlight-color : rgba(0,0,0,0);
+    border-radius: 0;
+    -webkit-box-sizing: content-box;
+    -webkit-appearance: button;
+    appearance: button;
+    border: none;
+    box-sizing: border-box;
+    &::-webkit-search-decoration {
+      display: none;
+    }
+    &::focus {
+      outline-offset: -2px;
+    }
 }
