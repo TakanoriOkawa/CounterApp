@@ -39,6 +39,7 @@
             data:{
                 first:0,
                 second:0,
+                sum:0,
                 title:'addition',
                 format:['Addition','Subtraction','Multiplication','Division'],
                 key:'+',  
@@ -75,15 +76,13 @@
                             return this.first * this.second;
                         }else{
                             this.title = this.format[3];
-                            return this.first / this.second;
+                            this.sum = this.first / this.second;
+                            return Math.round(this.sum * 1000) / 1000;
                         }
                     }
                 },
             },
-            //resultAddはcomputedではなく、methodsでもいいのでは？  
         }).$mount("#app");
-
-        //position absoluteを使うとボタンが押せない
     </script>
 </body>
 </html>

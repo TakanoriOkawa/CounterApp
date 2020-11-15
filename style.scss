@@ -3,9 +3,7 @@
     padding: 0;
     font-family: 'Oswald', sans-serif;
     outline: none !important;
-}
-html {
-    //連続タッチのズームを向こう
+    //連続タッチのズームを無効にする。
     touch-action: manipulation;
 }
 body{
