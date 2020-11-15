@@ -2,24 +2,30 @@
     margin: 0;
     padding: 0;
     font-family: 'Oswald', sans-serif;
+    outline: none !important;
+}
+html {
+    //連続タッチのズームを向こう
+    touch-action: manipulation;
 }
 body{
     color: white;
     background-color: rgb(0, 0, 0);
 }
 #container{
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 .title{
+    margin-bottom: 60px;
     font-size: 45px;
-    letter-spacing: 1.5px;
 }
 .cal{
     font-size: 50px;
+    text-shadow: 3px 3px rgb(121, 121, 121);
 }
 .inputArea{
     width: 100%;
@@ -28,6 +34,7 @@ body{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 60px;
     & .btn{
         font-size: 30px;
         font-weight: 700;
@@ -47,14 +54,7 @@ body{
     margin: 0px 10px;
     cursor: pointer;
 }
-:focus{
-    outline: none !important;
-}
 button{
     color:black;
     background-color: white;
-
-    // -webkit-border-radius: 0;
-    -webkit-appearance : none;
-    // -webkit-tap-highlight-color : rgba(0, 0, 0, 0);
 }
