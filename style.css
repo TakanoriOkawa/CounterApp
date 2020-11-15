@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   font-family: 'Oswald', sans-serif;
-  outline: none !important;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
 }
@@ -29,9 +28,16 @@ body {
           align-items: center;
 }
 
+button {
+  color: black;
+  background-color: white;
+  outline: none !important;
+  cursor: pointer;
+}
+
 .title {
-  margin-bottom: 60px;
   font-size: 45px;
+  margin-bottom: 60px;
 }
 
 .cal {
@@ -62,7 +68,6 @@ body {
   font-weight: 700;
   padding: 5px 10px;
   margin: 20px;
-  cursor: pointer;
 }
 
 .inputArea .top,
@@ -75,11 +80,5 @@ body {
   font-weight: 700;
   padding: 5px 10px;
   margin: 0px 10px;
-  cursor: pointer;
-}
-
-button {
-  color: black;
-  background-color: white;
 }
 /*# sourceMappingURL=style.css.map */

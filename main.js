@@ -28,13 +28,13 @@ new Vue({
     computed:{
         resultAdd(){
             return function(f){
-                if(f === "+"){
+                if(f === '+'){
                     this.title = this.format[0];
                     return this.first + this.second;
-                }else if(f === "-"){
+                }else if(f === '-'){
                     this.title = this.format[1];
                     return this.first - this.second;
-                }else if(f === "×"){
+                }else if(f === '×'){
                     this.title = this.format[2];
                     return this.first * this.second;
                 }else{
